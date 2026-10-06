@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cortes da Palavra</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; font-family: Georgia, 'Times New Roman', serif; background: #0d0b08; color: #f3e9d2; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; line-height: 1.6; }
+  h1 { font-family: Cinzel, Georgia, serif; letter-spacing: 2px; color: #f7d56e; font-weight: 700; margin: 0 0 8px; }
+  h2 { color: #f7d56e; font-size: 1.1rem; margin-top: 2em; }
+  .sub { color: #cdbf9c; margin-bottom: 32px; }
+  a { color: #f7d56e; }
+  .botao { display: inline-block; background: #f7d56e; color: #1a1206; font-weight: 700; padding: 14px 22px;
+           border-radius: 8px; text-decoration: none; font-family: Arial, sans-serif; }
+  .caixa { background: #1a1510; border: 1px solid #3a3020; border-radius: 10px; padding: 18px 20px; margin: 18px 0; }
+  code { background: #1a1510; padding: 2px 6px; border-radius: 4px; }
+  footer { margin-top: 48px; color: #8f8468; font-size: .9rem; }
+</style></head>
+<body><main>
+<h1>CORTES DA PALAVRA</h1>
+<p class="sub">Os momentos mais fortes de pregações bíblicas, em cortes curtos e legendados.
+Publicados no <a href="https://www.youtube.com/@cortesdapalavratf">YouTube</a>,
+no <a href="https://www.instagram.com/cortesdapalavratf/">Instagram</a> e no
+<a href="https://www.tiktok.com/@cortesdapalavratf">TikTok</a>.</p>
+
+<div class="caixa">
+  <p><strong>Publicador</strong> — ferramenta do próprio canal que leva cada corte, assim que sai no YouTube,
+  para o TikTok (@cortesdapalavratf), com legenda e capa. Uso restrito ao dono do canal.</p>
+  <p><a class="botao" href="https://www.tiktok.com/v2/auth/authorize/?client_key=sbawzpli586oxd7ii7&scope=user.info.basic%2Cuser.info.profile%2Cuser.info.stats%2Cvideo.list%2Cvideo.upload%2Cvideo.publish&response_type=code&redirect_uri=https%3A%2F%2Fskisperd.github.io%2F&state=cortes">Entrar com TikTok</a></p>
+  <p id="volta" style="display:none">Autorizado. Copie o endereço desta página e cole no publicador
+  (<code>auth_tiktok.py --volta "&lt;endereço&gt;"</code>).</p>
+</div>
+
+<h2>Como funciona</h2>
+<p>1. O dono do canal entra uma vez com a conta do TikTok (Login Kit) e autoriza o publicador.<br>
+2. De hora em hora, o publicador vê qual corte acabou de ir ao ar no YouTube e publica o mesmo vídeo vertical
+no TikTok com o título, o link da mensagem completa e as hashtags (Content Posting API, Direct Post).<br>
+3. Um relatório diário, só de leitura, mostra seguidores, curtidas e visualizações por vídeo.</p>
+
+<footer><a href="privacidade.html">Política de privacidade</a> · <a href="termos.html">Termos de uso</a>
+· Contato: tf.dias.oliveira@gmail.com</footer>
+</main>
+<script>
+  // Depois da autorização o TikTok volta para cá com ?code=...: mostrar a instrução.
+  if (location.search.includes("code=")) document.getElementById("volta").style.display = "block";
+</script>
+</body></html>
